@@ -1,0 +1,11 @@
+<div>
+	<?php
+	if(isset($_GET['ac'])){
+		$tam=$_GET['ac'];
+	}else{
+		$tam='';
+	}if($tam=='them'){
+		include('modules/quanlynguoidung/lietke.php');
+	}
+	?>
+</div>

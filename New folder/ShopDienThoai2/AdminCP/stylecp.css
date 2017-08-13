@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	padding:0;
+	margin:0;
+}
+
+.wrapper{
+	width:1400px;
+	height:auto;
+	border: 1px solid #000;
+	margin:auto;
+}
+.header{
+	width:100%;
+	height:120px;
+	border:1px solid #000;
+}
+.menu{
+	width:100%;
+	height:40px;
+	border:1px solid #000;
+}
+.menu ul{
+	width:100%;
+	height:40px;
+	list-style:none;
+}
+.menu ul li{
+	width:260px;
+	height:40px;
+	line-height:40px;
+	float:left;
+}
+.menu ul li a{
+	float:right;
+	text-decoration:none;
+	color:#000;
+	
+}
+.menu a:hover{
+	color:#9F6;
+}
+.left{
+	width:300px;
+	height=auto;
+	border:1px solid #000;	
+	float:left;
+}
+.right{
+	width:1085px;
+	height:auto;
+	border:1px solid #000;
+	float:right;
+	margin-left:10px
+}
+.content{
+	width:100%;
+	height:auto;
+	border:1px solid #000;
+}
+.clear{
+	clear:both;
+}
+.footer{
+	width:100%;
+	height:80px;
+	border:1px solid #000;
+}
