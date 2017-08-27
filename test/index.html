@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Tutorial-22</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Tutorial-22</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen">
+    <script type="text/javascript" src="script-add.js"></script>
+    <script type="text/javascript" src="script-edit.js"></script>
+</head>
+<body>
+
+<div class="signin-form">
+
+    <div class="container">
+        <form class="form-signin" method="post" id="register-form">
+        <table class="table table-bordered">
+        <thead>
+            <h2 class="form-signin-heading">ちゅらまーい Ha:mo　観光ルートメンテナンス</h2><hr />
+        </thead>
+        <tbody>
+            
+
+            
+            <tr>
+                <div class="form-group">
+                    <td>
+                        <label>ルートID: </label>
+                        <input type="text" class="form-control" disabled="disabled" placeholder="Poi_id" name="poi_id" id="poi_id" >
+                    </td>
+                    <td>
+                        <label>グループID:</label>
+                        <select class="form-select" name="group_id" id="group_id">
+                            <option value="G1">G1</option>
+                            <option value="G2">G2</option>
+                            <option value="G3">G3</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-default" name="btn" id="btn">
+                            <span class="glyphicon glyphicon-cc"></span> &nbsp; キャンセル
+                        </button> 
+
+                        <button type="submit" class="btn btn-default" name="btn-save" id="btn-submit">
+                            <span class="glyphicon glyphicon-log-in"></span> &nbsp; Add
+                        </button>
+
+                        <button type="button" name="edit" id="edit">
+                        <span class="glyphicon glyphicon-log-in">></span> Edit
+                        </button>
+
+                        <button type="button" name="delete" id="delete"><span class="glyphicon glyphicon-log-in">></span> Delete
+                        </button>
+                    </td> 
+                </div>
+            </tr>
+
+            <tr>
+                <div class="form-group">
+                    <td>
+                        <label>ポイント名称: </label>
+                        <input type="text" class="form-control" placeholder="Poi_name" name="poi_name" id="poi_name" >
+                    </td>
+                    <td>
+                        <label>かな :</label>
+                        <input type="text" class="form-control" placeholder="Poi_kana" name="poi_kana" id="poi_kana" >
+                    </td>
+                    <td><div id="error">
+            </div></td>
+                </div>
+            </tr>
+
+            <tr>
+                <div class="form-group">
+                <td>
+                    <label>緯度:</label>
+                    <input type="text" onkeypress="return onlyNumbers" class="form-control" placeholder="26.12345m" name="poi_lat" id="poi_lat"><br/>
+                    <label>※世界測地系で入力</label>
+                </td>
+                <td>
+                    <label>経度:</label>
+                    <input type="text" class="form-control" placeholder="126.12345" name="poi_lon" id="poi_lon">
+                </td>
+                <td>
+                    <label>緯度経度(日本測地): </label>
+                    
+                </td>
+                </div>   
+            </tr>
+
+            <tr>
+                <div class="form-group">
+                    <td>
+                        <label>アイコン緯度: </label>
+                        <input type="text" class="form-control" placeholder="26.12345" name="icon_lat" id="icon_lat">
+                        <label>※世界測地系で入力</label>
+                    </td>
+                    <td>
+                        <label>アイコン経度: </label>
+                        <input type="text" class="form-control" placeholder="126.12345" name="icon_lon" id="icon_lon">
+                    </td>
+                    <td>
+                        <label>アイコン緯度経度(日本測地): </label>
+                        
+                    </td>
+                </div>
+                </tr>
+                
+                <tr>
+                <div class="form-group">
+                    <td>
+                        <label>ポイント種別: </label>
+                        <select class="form-select" name="point_type">
+                            <option value="aaa">aaa</option>
+                            <option value="bbb">bbb</option>
+                            <option value="ccc">ccc</optio0n>
+                        </select>
+                    </td>
+
+                    <td colspan="2">
+                        <label>イコン種別: </label>
+                        <input type="radio" name="icon_type" value="見る"><label> 見る </label>
+                        <input type="radio" name="icon_type" value="食べる"><label> 食べる </label>
+                        <input type="radio" name="icon_type" value="買う"><label> 買う </label> 
+                        <input type="radio" name="icon_type" value="トイレ"><label> トイレ </label>
+                    </td>
+
+                </div>
+            </tr>
+
+            <tr>
+                <div class="form-group">
+                <td>
+                    <div class="unknown">
+                        <input type="radio" name="goal"><label> ゴールとしても登録 </label><br>
+                        <input type="radio" name="goal"><label> マルチゴール対象 </label><br>
+
+                        <label>EV : </label>
+                        <select class="form-select" name="ev_flag" id="ev_flag">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="unknown2">
+                        <label>アイコン向き:</label>
+                        <input type="text" name="icon_orentation">
+                    </div>
+                </td>
+
+                <td>
+                    <div class="voice_id">
+                        <label>次観光ポイント音声ID: </label>
+                        <input type="text" class="form-control" placeholder="OKINAWA" name="next_voice_id" id="next_voice_id"> <br>
+
+                        <label>到着音声ID: </label>
+                        <input type="text" class="form-control" placeholder="OKIMAWA" name="voice_id" id="voice_id"> <br>
+
+                        <label>管理者ID:</label>
+                        <select class="form-select" name="admin_id" id="admin_id">
+                            <option value="aaa">OKINAWA</option>
+                            <option value="bbb">bbb</option>
+                            <option value="ccc">ccc</option>
+                        </select>
+                    </div>
+                </td>
+                    
+                </div>
+            </tr>
+
+            <div class="form-group">
+                <form>
+                    <table class="tbl" border="1" width="900px">
+                    <tr>
+                        <td>詳細情報</td>
+                        <td>営業時間</td>
+                        <td>駐車場</td>
+                        <td>定休日</td>
+                        <td>料金</td>
+                        <td>クレジット</td>
+                        <td>写真名称.pngは省略)</td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="text" class="tbl-box" placeholder="tourist_detail" name="tourist_detail" id="tourist_detail"></td>
+
+                        <td><input type="text" class="tbl-box" placeholder="business_hours" name="business_hours" id="business_hours"></td>
+
+                        <td><input type="text" class="tbl-box" placeholder="parking" name="parking" id="parking"></td>
+
+                        <td><input type="text" class="tbl-box" placeholder="closing_day" name="closing_day" id="closing_day"></td>
+
+                        <td><input type="text" class="tbl-box" placeholder="pay" name="pay" id="pay"></td>
+
+                        <td><input type="text" class="tbl-box" placeholder="credit_card" name="credit_card" id="credit_card"></td>
+
+                        <td><input type="text" placeholder="okinawa001" disabled="" name=""></td>
+                    </tr>
+                    </table>
+
+                    <button type="submit" class="btn btn-end">観光コンテンツ <br /> 定義ファイル出力</button>
+
+                </form>    
+            </div>
+            </option>
+            </select></div>
+            </tbody>
+            </table>
+        </form> 
+    </div>
+</div>
+</body>
+</html>

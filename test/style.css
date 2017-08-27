@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background:#f1f9f9;
+}
+
+.form-signin {
+    max-width: 1300px;
+    height: 880px;
+    padding: 19px 29px 29px;
+    margin: 0 auto;
+	//margin-top:90px;
+    background-color: #fff;
+	
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+       -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+            box-shadow: 0 1px 2px rgba(0,0,0,.05);
+			
+	font-family:Tahoma, Geneva, sans-serif;
+	color:#990000;
+	font-weight:lighter;
+}
+
+.form-signin .form-signin-heading{
+    color:#00A2D1;
+}
+.form-signin input[type="text"]{
+    font-size: 18px;
+    height: auto;
+    padding: 7px 9px;
+}
+
+select {
+    width: 176px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-control {
+    width: 176px;
+    padding: 12px 20px;
+    margin: 5px 0 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-select {
+    width: 176px;
+    height: 41px;
+    margin: 5px 0 5px;
+}
+
+.alert-danger {
+    color: #43a22c;
+    background-color: #c9f1ca;
+    border-color: #ffffff;
+}
+
+.alert-danger-false {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.signin-form
+{
+	//border:solid red 1px;
+	margin-top:80px;
+}
+.navbar-brand{
+	font-family:"Lucida Handwriting";
+}
+#btn-submit{
+	height:45px;
+}
+
+.unknown {
+    float: left;
+}
+
+.voice_id {
+    float: right;
+}
+
+.unknown2 {
+    margin: 0 auto;
+}
+
+.tbl-box {
+    width: 140px;
+    border: 0;
+}
+
+.form-signin-heading {
+    text-align: center;
+}
+
+label, td {
+    color: #555;
+}
+
+.btn-end {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    float: right;
+    color: black; 
+}

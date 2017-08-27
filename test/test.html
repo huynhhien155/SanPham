@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Select a new car from the list.</p>
+
+<select id="mySelect" onchange="myFunction()">
+  <option value="Audi">Audi
+  <option value="BMW">BMW
+  <option value="Mercedes">Mercedes
+  <option value="Volvo">Volvo
+</select>
+
+<input type="text" name="poi_lat" id="poi_lat" onchange="AutoCompl()">
+<input type="text" name="poi_lon" id="poi_lon" onchange="AutoCompl()">
+
+<p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+
+<p id="demo"></p>
+
+<p id="poi_lat_lon"></p> 
+<p></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("mySelect").value;
+    document.getElementById("demo").innerHTML = "You selected: " + x;
+}
+
+function AutoCompl() {
+    var temp = document.getElementById("poi_lat").value;
+    var temp2 = document.getElementById("poi_lon").value;
+    document.getElementById("poi_lat_lon").innerHTML = "You selected: " + temp + "." + temp2;
+}
+
+
+</script>
+
+</body>
+</html>
